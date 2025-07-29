@@ -53,12 +53,8 @@ with DAG(
     extract_apod = HttpOperator(
         task_id='extract_apod',
         http_conn_id='nasa_api',
-        endpoint='planetary/apod',
+        endpoint='planetary/apod?api_key={{ conn.nasa_api.extra_dejson.api_key }}',
         method='GET',
-        headers={'Content-Type': 'application/json'},
-        # Use query parameters instead of data for GET request
-        # Alternative: hardcode API key or use Airflow Variables
-        extra_options={'params': {'api_key': '{{ conn.nasa_api.extra_dejson.api_key }}'}},  # Replace with your API key
         response_filter=lambda response: response.json(),
         log_response=True,
     )
