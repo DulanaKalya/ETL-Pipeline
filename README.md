@@ -89,19 +89,19 @@ Each step is implemented as a separate task and linked using Airflow's TaskFlow 
 *This shows the visual representation of the ETL pipeline with task dependencies*
 
 <!-- Replace with your actual screenshot -->
-![Airflow DAG Graph View](./screenshots/airflow_dag_graph.png)
+![Airflow DAG Graph View](./screenshots/1.png)
 
 ### DAG Tree View
 *Timeline view showing task execution history and status*
 
 <!-- Replace with your actual screenshot -->
-![Airflow DAG Tree View](./screenshots/airflow_dag_tree.png)
+![Airflow DAG Tree View](./screenshots/1.png)
 
 ### Task Execution Logs
 *Detailed logs from successful pipeline runs*
 
 <!-- Replace with your actual screenshot -->
-![Airflow Task Logs](./screenshots/airflow_task_logs.png)
+![Airflow Task Logs](./screenshots/2.png)
 
 ---
 
@@ -129,7 +129,7 @@ The pipeline uses `INSERT ... ON CONFLICT` to prevent duplication and update exi
 *Results from SELECT * FROM apod_data ORDER BY date DESC LIMIT 5;*
 
 <!-- Replace with your actual screenshot -->
-![PostgreSQL Query Results](./screenshots/postgres_output.png)
+![PostgreSQL Query Results](./screenshots/3.png)
 
 ### Database Table Structure
 *To view the table structure, run:*
