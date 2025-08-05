@@ -1,4 +1,4 @@
-# 🚀 ETL Pipeline: NASA APOD Data to PostgreSQL using Airflow & Astro
+#  ETL Pipeline: NASA APOD Data to PostgreSQL using Airflow & Astro
 
 This project implements a daily ETL pipeline using **Apache Airflow**, hosted via **Astro Runtime**, that fetches **NASA Astronomy Picture of the Day (APOD)** data via API and loads it into a **PostgreSQL database**.
 
@@ -6,7 +6,7 @@ It demonstrates production-grade practices such as task modularity, automated re
 
 ---
 
-## 🎯 Project Objective
+##  Project Objective
 
 To build a containerized, production-ready **ETL pipeline** that:
 - Automatically pulls data from NASA's APOD API on a daily basis
@@ -17,7 +17,7 @@ To build a containerized, production-ready **ETL pipeline** that:
 
 ---
 
-## 🧭 Pipeline Flow
+##  Pipeline Flow
 
 ```mermaid
 graph LR
@@ -30,7 +30,7 @@ Each step is implemented as a separate task and linked using Airflow's TaskFlow 
 
 ---
 
-## 🧰 Tools & Frameworks Used
+##  Tools & Frameworks Used
 
 | Category         | Tools / Frameworks                            |
 | ---------------- | --------------------------------------------- |
@@ -45,7 +45,7 @@ Each step is implemented as a separate task and linked using Airflow's TaskFlow 
 
 ---
 
-## 🛠 Folder Structure
+##  Folder Structure
 
 ```
 .
@@ -69,7 +69,7 @@ Each step is implemented as a separate task and linked using Airflow's TaskFlow 
 
 ---
 
-## 🔧 DAG Details
+##  DAG Details
 
 **DAG ID**: `nasa_apod_postgres`  
 **Schedule**: `@daily`  
@@ -83,7 +83,7 @@ Each step is implemented as a separate task and linked using Airflow's TaskFlow 
 
 ---
 
-## 🌐 Apache Airflow Screenshots
+##  Apache Airflow Screenshots
 
 ### DAG Graph View
 *This shows the visual representation of the ETL pipeline with task dependencies*
@@ -105,7 +105,7 @@ Each step is implemented as a separate task and linked using Airflow's TaskFlow 
 
 ---
 
-## 🧪 Data Schema
+##  Data Schema
 
 ```sql
 CREATE TABLE IF NOT EXISTS apod_data (
@@ -245,32 +245,7 @@ ORDER BY month DESC;
 
 ---
 
-## 🚨 Troubleshooting
 
-### Common Issues:
-
-1. **DAG not appearing in UI:**
-   ```bash
-   # Check DAG parsing errors
-   astro dev logs scheduler
-   ```
-
-2. **PostgreSQL connection failed:**
-   - Verify connection settings in Airflow UI
-   - Check if PostgreSQL service is running
-
-3. **NASA API rate limiting:**
-   - Ensure valid API key in environment variables
-   - Check task retry intervals
-
-4. **Docker container issues:**
-   ```bash
-   # Restart Astro environment
-   astro dev stop
-   astro dev start
-   ```
-
----
 
 
 ## 📈 Performance Metrics
